@@ -1,4 +1,4 @@
-## Wie ben ik
+## Wie
 
 Robert Keersse
 
@@ -22,7 +22,7 @@ Robert Keersse
 
 ---
 
-## Wat Vagrant
+## Wat
 
 * command line tool
 * automatisatie van vms met
@@ -35,7 +35,7 @@ Robert Keersse
 
 ---
 
-## Waarom Vagrant
+## Waarom
 
 * snel en eenvoudig
 * integratie met cfgmgmt-tools
