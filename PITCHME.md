@@ -3,7 +3,8 @@
 * Wie
 * Wat en waarom
 * Box
-  - configureren 
+  - setup
+  - config 
   - provisioning
 * demo
   - git, vagrant, ansible, docker..
@@ -48,7 +49,7 @@ Robert Keersse
 ---
 
 ## Box
-### minimal setup
+### setup
 
 ```
 $ vagrant init centos/7
@@ -58,4 +59,13 @@ $ vagrant ssh
 
 https://app.vagrantup.com/boxes/search
 
+---
 
+## Box
+### config
+
+```
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+end
+```
