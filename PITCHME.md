@@ -1,9 +1,9 @@
 ## Agenda 
 
-* Wie ?
-* Wat en waarom ?
+* Wie
+* Wat en waarom
 * Box
-  - config configureren van een box
+  - configureren 
   - provisioning
 * demo
   - git, vagrant, ansible, docker..
@@ -47,6 +47,15 @@ Robert Keersse
 
 ---
 
-## Ophalen van een Box
+## Box
+### minimal setup
+
+```
+$ vagrant init centos/7
+$ vagrant up
+$ vagrant ssh
+```
 
 https://app.vagrantup.com/boxes/search
+
+
