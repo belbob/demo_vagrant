@@ -47,6 +47,6 @@ Robert Keersse
 
 ---
 
-## Ophalen van een Box
+## Init
 
 https://app.vagrantup.com/boxes/search
