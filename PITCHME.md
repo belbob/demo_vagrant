@@ -1,10 +1,10 @@
-## Agenda 
+## Agenda
 
 * Wie
 * Wat en waarom
 * Box
   - setup
-  - config 
+  - config
   - provisioning
 * demo
   - git, vagrant, ansible, docker..
@@ -48,9 +48,6 @@ Robert Keersse
 
 ---
 
-<<<<<<< HEAD
-## Init
-=======
 ## Box
 ### setup
 
@@ -59,7 +56,6 @@ $ vagrant init centos/7
 $ vagrant up
 $ vagrant ssh
 ```
->>>>>>> refs/remotes/origin/master
 
 https://app.vagrantup.com/boxes/search
 
