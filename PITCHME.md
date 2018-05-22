@@ -1,52 +1,75 @@
+## Agenda 
+
+* Wie
+* Wat en waarom
+* Box
+  - setup
+  - config 
+  - provisioning
+* demo
+  - git, vagrant, ansible, docker..
+
+---
+
 ## Wie
 
 Robert Keersse
 
 * leerkracht PC-Technieken Don Bosco Wilrijk
   - Hard- en Software
-  - Open source en Linux
+  - Linux en Open source
 * @RobertKeersse
 * https://be.linkedin.com/in/belbob  
 
 ---
 
-## Agenda
-
-* Wat en waarom Vagrant
-* ophalen van een box
-* configureren van een box
-* provisioning
-  - shell, ansible,...
-* demo
-  - git, vagrant, ansible, docker..
-
----
-
 ## Wat
 
-* command line tool
-* automatisatie van vms met
+* CLI
+* VM-automatisatie
   - hyperv
   - libvirt
   - virtualbox
   - vmware
-  - ... meer dan 22 hypervisors
-* draait op Linux, MacOS, Windows
+  - ... + 22 hypervisors
+* Linux, MacOS, Windows
 
 ---
 
 ## Waarom
 
 * snel en eenvoudig
-* integratie met cfgmgmt-tools
-  - shell, ansible, ..., chef
+* cfgmgmt-tools integratie
+  - shell, ansible,...
 * reproduceerbaar
-* eenvoudig verplaatsbaar
+* verplaatsbaar
   - geen grote bestanden (+4gb img, ova,..)
   - "git clone" en "vagrant up"
 
 ---
 
+<<<<<<< HEAD
 ## Init
+=======
+## Box
+### setup
+
+```
+$ vagrant init centos/7
+$ vagrant up
+$ vagrant ssh
+```
+>>>>>>> refs/remotes/origin/master
 
 https://app.vagrantup.com/boxes/search
+
+---
+
+## Box
+### config
+
+```
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+end
+```
