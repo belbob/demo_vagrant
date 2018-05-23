@@ -39,10 +39,11 @@ Versiebeheersysteem
 
 ### VAGRANT
 
-* VM-automatisatie
-* snel en eenvoudig
-* cfgmgmt-tools integratie
-* reproduceerbaar, verplaatsbaar (klein)
+VM-automatisatie
+  - snel en eenvoudig
+  - cfgmgmt-integratie
+  - reproduceerbaar
+  - verplaatsbaar
 
 ---
 
