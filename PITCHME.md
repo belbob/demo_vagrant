@@ -1,17 +1,12 @@
 ## Agenda
 
-* Wie
-* Wat en waarom
-* Box
-  - setup
-  - config
-  - provisioning
-* demo
-  - git, vagrant, ansible, docker..
+* ME
+* TOOLS
+* DEMO
 
 ---
 
-## Wie
+## ME
 
 Robert Keersse
 
@@ -23,49 +18,50 @@ Robert Keersse
 
 ---
 
-## Wat
+## TOOLS
 
-* CLI
-* VM-automatisatie
-  - hyperv
-  - libvirt
-  - virtualbox
-  - vmware
-  - ... + 22 hypervisors
-* Linux, MacOS, Windows
+* GIT
+* VAGRANT
+* ANSIBLE
+* DOCKER
 
 ---
 
-## Waarom
+### GIT
 
+Versiebeheersysteem
+  - snel
+  - eenvoudig
+  - gedistribueerd
+  - efficiënt
+
+---
+
+### VAGRANT
+
+* VM-automatisatie
 * snel en eenvoudig
 * cfgmgmt-tools integratie
-  - shell, ansible,...
-* reproduceerbaar
-* verplaatsbaar
-  - geen grote bestanden (+4gb img, ova,..)
-  - "git clone" en "vagrant up"
+* reproduceerbaar, verplaatsbaar (klein)
 
 ---
 
-## Box
-### setup
+### ANSIBLE
 
-```
-$ vagrant init centos/7
-$ vagrant up
-$ vagrant ssh
-```
-
-https://app.vagrantup.com/boxes/search
+* cfgmgmttool
+* eenvoudig
 
 ---
 
-## Box
-### config
+### DOCKER
 
-```
-Vagrant.configure("2") do |config|
-  config.vm.box = "centos/7"
-end
-```
+
+---
+
+## DEMO
+
+* setup VM with VAGRANT
+* provision VM with ANSIBLE
+* create and run VM with DOCKER
+* DOCKER and Portainer
+* Scaling with Kubernetes
