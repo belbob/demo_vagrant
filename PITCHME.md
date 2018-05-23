@@ -49,13 +49,21 @@ VM-automatisatie
 
 ### ANSIBLE
 
-* cfgmgmttool
-* eenvoudig
+configuratie tool
+  - eenvoudig
+  - clientloos
+  - idempotent
 
 ---
 
 ### DOCKER
 
+containers
+  - klein
+  - snel
+  - overal hetzelfde
+  - ready-to-run applications
+  - efficiënt
 
 ---
 
