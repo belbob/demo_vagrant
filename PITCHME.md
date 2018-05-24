@@ -45,6 +45,8 @@ VM-automatisatie
   - reproduceerbaar
   - verplaatsbaar
 
+note:
+zeer veel providers/hypervisors
 ---
 
 ### ANSIBLE
