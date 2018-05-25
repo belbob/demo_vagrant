@@ -32,6 +32,7 @@ note:
 note:
 - Linux, Windows*, MacOS
 - open source, vrij te gebruiken
+- command line - programeren, scripts, ed.
 - *Vagrant: virtual box - hyper-v
 - *Ansible: ssh + python
 - *Docker for MS: hyper-v, min w10-pro
@@ -43,16 +44,20 @@ note:
 Versiebeheersysteem
   - snel
   - eenvoudig
+  - takken
   - gedistribueerd
   - efficiënt
 
 note:
 - reeds vanaf 2005
+- zoals bitkeeper, mercurial,..
+- niet gecentraliseerd zoals vcs, subversion,..
 - snel -> alles staat lokaal
 - eenvoudig -> enkele commands (12-15)
+- werkt met momentopnames
+- efficiënt -> grote projecten, dataopslag
 - backups -> elke clone is volledige repo
-
-
+- en nog veel meer
 
 ---
 
