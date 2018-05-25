@@ -25,6 +25,13 @@ Robert Keersse
 * ANSIBLE
 * DOCKER
 
+note:
+zowel voor Linux, Windows, MacOS
+open source, vrij te gebruiken
+Vagrant: virtual box - hyper-v
+Ansible: ssh + python
+Docker for MS: hyper-v, min w10-pro
+
 ---
 
 ### GIT
@@ -34,6 +41,13 @@ Versiebeheersysteem
   - eenvoudig
   - gedistribueerd
   - efficiënt
+
+note:
+reeds vanaf 2005
+snel -> alles staat lokaal
+eenvoudig -> enkele commands (12-15)
+backups -> elke clone is volledige repo
+
 
 ---
 
