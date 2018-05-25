@@ -1,99 +1,3 @@
-## Agenda
-
-* ME
-* TOOLS
-* DEMO
-
----
-
-## ME
-
-Robert Keersse
-
-* leerkracht PC-Technieken Don Bosco Wilrijk
-  - Hard- en Software
-  - Linux en Open source
-* @RobertKeersse
-* https://be.linkedin.com/in/belbob  
-
-note:
-- mijn meestgebruikte tools
-- cursus 1/2 jaar
-
----
-
-## TOOLS
-
-* GIT
-* VAGRANT
-* ANSIBLE
-* DOCKER
-
-note:
-- Linux, Windows*, MacOS
-- open source, vrij te gebruiken
-- command line - programeren, scripts, ed.
-- *Vagrant: virtual box - hyper-v
-- *Ansible: ssh + python
-- *Docker for MS: hyper-v, min w10-pro
-
----
-
-### GIT
-
-Versiebeheersysteem
-  - snel
-  - eenvoudig
-  - takken
-  - gedistribueerd
-  - efficiënt
-
-note:
-- reeds vanaf 2005
-- zoals bitkeeper, mercurial,..
-- niet gecentraliseerd zoals vcs, subversion,..
-- snel -> alles staat lokaal
-- eenvoudig -> enkele commands (12-15)
-- werkt met momentopnames
-- efficiënt -> grote projecten, dataopslag
-- backups -> elke clone is volledige repo
-- en nog veel meer
-
----
-
-### VAGRANT
-
-VM-automatisatie
-  - snel en eenvoudig
-  - cfgmgmt-integratie
-  - reproduceerbaar
-  - verplaatsbaar
-
-note:
-- zeer veel providers/hypervisors
-
----
-
-### ANSIBLE
-
-configuratie tool
-  - eenvoudig
-  - clientloos
-  - idempotent
-
----
-
-### DOCKER
-
-containers
-  - klein
-  - snel
-  - overal hetzelfde
-  - ready-to-run applications
-  - efficiënt
-
----
-
 ### Introductie
 # VAGRANT
 
@@ -127,6 +31,130 @@ Vagrant.configure("2") do |config|
 end
 ```
 +++
+
+## VAGRANT
+eenvoudige commando's
+
+```
+$ vagrant up
+$ vagrant ssh
+[vagrant@localhost ~]$
+```
+---
+
+## mooi, maar...
+
+```
+$ VBoxManage createvm
+  --name
+  -- en nog veel meer parameters...
+$ or
+$ virt-install \  
+  -n myRHELVM1 \
+   --description "Test VM with RHEL 6" \  
+   --os-type=.....
+```
+---
+
+### wel, schrijf eens een script dat volgende doet...
+
++++
+
+## VAGRANT
+multi-platform
+- MacOS
+- Windows
+- Linux
+
++++
+
+## VAGRANT
+netwerk beheer
+
+```
+vagrant@localhost ~]$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=57 time=19.6 ms
+
+```
+
++++
+
+## VAGRANT
+bestandsbeheer
+
+```
+vagrant@localhost ~]$ ls /vagrant/
+LICENSE  PITCHME.md  README.md  Vagrantfile
+
+```
+note:
+dit alles is niet zo eenvoudig te doen met een shell script
+
+---
+
+## belangrijke concepten
+
+Providers en Provisioners
+
+---
+
+## Providers
+zorgen voor virtualisatie
+
++++
+
+## Providers
+Local en Remote
+
++++
+
+## Providers
+Local
+- VirtualBox
+- Libvirt
+- VMWare
+- Docker
+-
+...
+
++++
+
+## Providers
+Remote
+- Opennebula
+- OpenStack
+- AWS
+- Azure
+-
+...
+
+---
+
+## Provisioners
+voorzien VM's van de nodige software
+
++++
+
+## Provisioners
+zorgen voor herbruikbare configuratie
+
++++
+
+## Provisioners
+eenvoudige inline scripts, shell, ...
+
+
++++
+
+## Provisioners
+complexe opties
+- Ansible
+- Puppet
+- Chef
+- ...
+
+---
 
 ## DEMO
 
