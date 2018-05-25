@@ -94,6 +94,40 @@ containers
 
 ---
 
+### Introductie
+## VAGRANT
+Robert Keersse
+@RobertKeersse
+Don Bosco Wilrijk
+afd. PC-Technieken
+
+---
+
+## Wat is VAGRANT?
+
+---
+
+## VAGRANT
+een tool om met virtuele machines te werken
+
++++
+
+## VAGRANT
+is een modulair framework om met vm's te werken
+
++++
+
+## VAGRANT
+alles draait rond de Vagrantfile
+
+```
+$ cat Vagrantfile
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+end
+```
++++
+
 ## DEMO
 
 * setup VM with VAGRANT
