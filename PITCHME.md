@@ -95,7 +95,7 @@ containers
 ---
 
 ### Introductie
-## VAGRANT
+# VAGRANT
 
 *Robert Keersse*
 
