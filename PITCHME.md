@@ -242,7 +242,45 @@ $ cat playbook.yml
       name: git
       state: latest
 ```
+
++++
+
+## voorbeeld: Ansible
+
+```
+$ vagrant up
+# networking, mount, and other magic
+# Ansible provisioner runs, git and deps are installed
+```
++++
+
+## voorbeeld: Ansible
+
+```
+$ vagrant ssh
+[vagrant@localhost ~]$ sudo yum list git
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: ftp.belnet.be
+ * extras: ftp.belnet.be
+ * updates: ftp.belnet.be
+Installed Packages
+git.x86_64                      1.8.3.1-13.el7                       @base
+```
 ---
+
+## Waarom VAGRANT?
+goed omschreven omgeving
+
++++
+
+## Waarom VAGRANT?
+eenvoudig te delen met alle users/devs/Ops
+
++++
+
+## Waarom VAGRANT?
+Vagrant vervangt grote VM blobs
 
 ## DEMO
 
