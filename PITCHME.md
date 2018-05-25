@@ -16,6 +16,10 @@ Robert Keersse
 * @RobertKeersse
 * https://be.linkedin.com/in/belbob  
 
+note:
+- mijn meestgebruikte tools
+- cursus 1/2 jaar
+
 ---
 
 ## TOOLS
@@ -49,6 +53,7 @@ note:
 - backups -> elke clone is volledige repo
 
 
+
 ---
 
 ### VAGRANT
@@ -61,6 +66,7 @@ VM-automatisatie
 
 note:
 - zeer veel providers/hypervisors
+
 ---
 
 ### ANSIBLE
