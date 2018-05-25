@@ -75,7 +75,6 @@ netwerk beheer
 vagrant@localhost ~]$ ping 8.8.8.8
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=57 time=19.6 ms
-
 ```
 
 +++
@@ -86,7 +85,6 @@ bestandsbeheer
 ```
 vagrant@localhost ~]$ ls /vagrant/
 LICENSE  PITCHME.md  README.md  Vagrantfile
-
 ```
 note:
 dit alles is niet zo eenvoudig te doen met een shell script
@@ -151,6 +149,104 @@ complexe opties
 - Puppet
 - Chef
 - ...
+
+---
+
+## voorbeeld: minimaal
+
+```
+$ vagrant init centos/7
+$ cat Vagrantfile
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+end
+```
+
++++
+
+## voorbeeld: minimaal
+
+```
+$ vagrant up
+# download base box (if not cached)
+# VM boots
+# Cross-OS networking
+# Cross-OS shared dir
+```
+
++++
+
+## voorbeeld: minimaal
+
+```
+$ vagrant ssh
+[vagrant@localhost ~]$
+```
+
+---
+
+## voorbeeld: shell
+
+```
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+  config.vm.provision "shell", inline: "yum -y install git"
+end
+```
+
++++
+
+## voorbeeld: shell
+
+```
+$ vagrant up
+# networking, mount, and other magic
+# shell provisioner runs, git and deps are installed
+```
+
+---
+
+## voorbeeld: Ansible
+
+```
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "playbook.yml"
+  end
+end
+```
++++
+
+## voorbeeld: Ansible
+
+```
+ansible.playbook = "playbook.yml"
+```
++++
+
++++
+
+## voorbeeld: Ansible
+
+
+```
+$cat playbook.yml
+```
+```
+---
+- hosts: all
+  user: vagrant
+  become: true
+  gather_facts: True
+
+  tasks:
+  - name: install the latest version of git
+    yum:
+      name: git
+      state: latest
+```
 
 ---
 
