@@ -99,8 +99,7 @@ containers
 
 *Robert Keersse*
 
-*Don Bosco Wilrijk*
-*afd. PC-Technieken*
+*Don Bosco Wilrijk - afd. PC-Technieken*
 
 ---
 
