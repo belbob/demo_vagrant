@@ -115,8 +115,7 @@ Local
 - Libvirt
 - VMWare
 - Docker
--
-...
+- ...
 
 +++
 
@@ -126,8 +125,7 @@ Remote
 - OpenStack
 - AWS
 - Azure
--
-...
+- ...
 
 ---
 
