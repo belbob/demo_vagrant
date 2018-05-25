@@ -118,7 +118,7 @@ is een modulair framework om met vm's te werken
 +++
 
 ## VAGRANT
-alles draait rond de Vagrantfile
+alles draait om een Vagrantfile
 
 ```
 $ cat Vagrantfile
