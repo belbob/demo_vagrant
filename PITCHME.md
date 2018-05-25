@@ -226,15 +226,10 @@ ansible.playbook = "playbook.yml"
 ```
 +++
 
-+++
-
 ## voorbeeld: Ansible
-
 
 ```
 $cat playbook.yml
-```
-```
 ---
 - hosts: all
   user: vagrant
