@@ -282,6 +282,8 @@ eenvoudig te delen met alle users/devs/Ops
 ## Waarom VAGRANT?
 Vagrant vervangt grote VM blobs
 
+---
+
 ## DEMO
 
 * setup VM with VAGRANT
