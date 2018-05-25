@@ -26,11 +26,11 @@ Robert Keersse
 * DOCKER
 
 note:
-- owel voor Linux, Windows, MacOS
+- Linux, Windows*, MacOS
 - open source, vrij te gebruiken
-- Vagrant: virtual box - hyper-v
-- Ansible: ssh + python
-- Docker for MS: hyper-v, min w10-pro
+- *Vagrant: virtual box - hyper-v
+- *Ansible: ssh + python
+- *Docker for MS: hyper-v, min w10-pro
 
 ---
 
