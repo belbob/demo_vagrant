@@ -97,13 +97,10 @@ containers
 ### Introductie
 ## VAGRANT
 
-Robert Keersse
+*Robert Keersse*
 
-@RobertKeersse
-
-Don Bosco Wilrijk
-
-afd. PC-Technieken
+*Don Bosco Wilrijk*
+*afd. PC-Technieken*
 
 ---
 
