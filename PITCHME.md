@@ -282,6 +282,21 @@ eenvoudig te delen met alle users/devs/Ops
 ## Waarom VAGRANT?
 Vagrant vervangt grote VM blobs
 
++++
+
+## Waarom VAGRANT?
+omgeving en code als geheel
+
++++
+
+## Waarom VAGRANT?
+herbruikbare configuratie
+
++++
+
+## Waarom VAGRANT?
+remote deploys ~= local deploys
+
 ---
 
 ## DEMO
