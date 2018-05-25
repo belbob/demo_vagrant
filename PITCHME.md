@@ -229,8 +229,8 @@ ansible.playbook = "playbook.yml"
 ## voorbeeld: Ansible
 
 ```
-$cat playbook.yml
----
+$ cat playbook.yml
+
 - hosts: all
   user: vagrant
   become: true
@@ -242,7 +242,6 @@ $cat playbook.yml
       name: git
       state: latest
 ```
-
 ---
 
 ## DEMO
