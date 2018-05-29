@@ -5,6 +5,9 @@
 
 *Don Bosco Wilrijk - afd. PC-Technieken*
 
+note:
+een uitleg over iets
+
 ---
 
 ## Wat is VAGRANT?
