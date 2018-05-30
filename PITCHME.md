@@ -252,6 +252,7 @@ $ vagrant up
 # start VM
 # start netwerk en bestandsbeheer
 # draait inine-script, install git
+```
 
 note:
 hier worden alle nodige depencies ineens mee geistalleerd
