@@ -328,6 +328,9 @@ Loading mirror speeds from cached hostfile
 Installed Packages
 git.x86_64                      1.8.3.1-13.el7                       @base
 ```
+note:
+git is geinstalleerd, en git word enkel terug geinstalleerd als het niet meer aanwezig op de laatste versie is
+
 ---
 
 ## Waarom VAGRANT?
@@ -338,10 +341,16 @@ goed omschreven omgeving
 ## Waarom VAGRANT?
 eenvoudig te delen met alle users/devs/Ops
 
+note:
+devops tool bij uitstek
+
 +++
 
 ## Waarom VAGRANT?
 Vagrant vervangt grote VM blobs
+
+note:
+geen 40 gb bestanden om te verplaatsen
 
 +++
 
@@ -353,6 +362,9 @@ omgeving en code als geheel
 ## Waarom VAGRANT?
 herbruikbare configuratie
 
+note:
+ansible of puppet bestanden heel eenvoudig herbruiken in reele wereld
+
 +++
 
 ## Waarom VAGRANT?
@@ -362,8 +374,7 @@ remote deploys ~= local deploys
 
 ## DEMO
 
-* setup VM with VAGRANT
-* provision VM with ANSIBLE
-* create and run VM with DOCKER
-* DOCKER and Portainer
-* Scaling with Kubernetes
+* setup VM met VAGRANT
+* provision VM met ANSIBLE
+* eenvoudige VM DOCKER DOCKER
+* Multi-VM schalen met Kubernetes
