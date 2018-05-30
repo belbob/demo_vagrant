@@ -1,7 +1,7 @@
 ### Introductie
 # VAGRANT
 
-*Peter Peeters*
+*Robert Keersse*
 
 *Don Bosco Wilrijk - afd. PC-Technieken*
 
@@ -15,7 +15,7 @@ een uitleg over iets
 ---
 
 ## VAGRANT
-een tool om met virtuele machines te werken
+is een tool om met virtuele machines te werken
 
 +++
 
@@ -45,18 +45,22 @@ $ vagrant ssh
 ```
 ---
 
-## mooi, maar...
+## best mooi, maar...
 
 ```
 $ VBoxManage createvm
-  --name
+  --name myCentOSVM1
+  --ostype centos
   -- en nog veel meer parameters...
 $ or
 $ virt-install \  
-  -n myRHELVM1 \
+  -n myCentOSVM1 \
    --description "Test VM with RHEL 6" \  
-   --os-type=.....
+   --os-type=centos
 ```
+note:
+ik heb al een reeks tools om dit te doen
+
 ---
 
 ### wel, schrijf eens een script dat volgende doet...
@@ -69,6 +73,9 @@ multi-platform
 - Windows
 - Linux
 
+note:
+is open source, je kan het compileren en gebruiken op elk OS, zolang je HW de capaciteiten heeft om te virtualiseren
+
 +++
 
 ## VAGRANT
@@ -79,6 +86,8 @@ vagrant@localhost ~]$ ping 8.8.8.8
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=57 time=19.6 ms
 ```
+note:
+routing, firewall, ...
 
 +++
 
@@ -90,13 +99,24 @@ vagrant@localhost ~]$ ls /vagrant/
 LICENSE  PITCHME.md  README.md  Vagrantfile
 ```
 note:
-dit alles is niet zo eenvoudig te doen met een shell script
+hier hebben we zelfs extra plugins voor, vb. sshfs,..
+
++++
+
+## VAGRANT
+vagrant is modulair, zowel voor config/deployment
+
+note:
+dit alles is moeiijk voor shell-scripts
 
 ---
 
 ## belangrijke concepten
 
 Providers en Provisioners
+
+note:
+dit zijn zeer belangrijke concepten in Vagrant
 
 ---
 
@@ -118,14 +138,17 @@ Local
 - Docker
 - ...
 
+note:
+ook Docker kan je beheren, bijna zoals een VM, ipv een vm te draaien , run je nu een container
+
 +++
 
 ## Providers
 Remote
-- Opennebula
 - OpenStack
 - AWS
 - Azure
+- digital Ocean
 - ...
 
 ---
@@ -141,17 +164,27 @@ zorgen voor herbruikbare configuratie
 +++
 
 ## Provisioners
-eenvoudige inline scripts, shell, ...
+simpele mogelijkheden zoals
 
+- inline script
+- shell
+
+note:
+dit kan een inline cmd zijn zoals "yum -y install git", of een echt bestand met daarin een shell-script, bash, python, perl, ...
 
 +++
 
 ## Provisioners
-complexe opties
+krachtigere opties zijn
+
 - Ansible
 - Puppet
 - Chef
+- Salt
 - ...
+
+note:
+je kan deze providers en provisioners door elkaar gebruiken, maak dus gebruik waarvan je de beste/meeste kennis hebt
 
 ---
 
@@ -164,6 +197,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
 end
 ```
+note:
+hier maken we de Vagrantfile , en geven deze weer met cat
 
 +++
 
@@ -171,11 +206,16 @@ end
 
 ```
 $ vagrant up
-# download base box (if not cached)
-# VM boots
-# Cross-OS networking
-# Cross-OS shared dir
+# download centos/7 box
+# start VM
+# start netwerkbeheer
+# start bestandsbeheer
 ```
+note:
+haalt de centos box enkel op als hij nog niet lokaal beschikbaar is
+zowel netwerk- als bestandsbeheer is cross-OS
+zorgt voor een set ssh-keys
+en nog veel meer
 
 +++
 
@@ -185,6 +225,10 @@ $ vagrant up
 $ vagrant ssh
 [vagrant@localhost ~]$
 ```
+
+note:
+met vagrant ssh kunnen inloggen naar onze nieuwe vm, zonder wachtwoord want we maken gebruik van ssh-keys
+de gebruiker is vagrant maar we kunnen eenvoudig wisselen naar vb. root door sudo su -
 
 ---
 
@@ -196,6 +240,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "yum -y install git"
 end
 ```
+note:
+is dezelfde Vagrantfile zoals bij minimaal, maar we hebben een inline script dat hier git gaat installeren
 
 +++
 
@@ -203,9 +249,12 @@ end
 
 ```
 $ vagrant up
-# networking, mount, and other magic
-# shell provisioner runs, git and deps are installed
-```
+# start VM
+# start netwerk en bestandsbeheer
+# draait inine-script, install git
+
+note:
+hier worden alle nodige depencies ineens mee geistalleerd
 
 ---
 
@@ -220,6 +269,9 @@ Vagrant.configure("2") do |config|
   end
 end
 ```
+note:
+is opnieuw dezelfde Vagrantfile, maar we hebben hier extra code om een ansible playbook te draaien
+
 +++
 
 ## voorbeeld: Ansible
@@ -227,6 +279,10 @@ end
 ```
 ansible.playbook = "playbook.yml"
 ```
+note:
+het belangrijkste hier is het playbook yml bestand, kan zeer eenvoudig zijn, maar evengoed een zeer complexe configuratie
+yml bestanden zijn eenvoudig tekstbestanden, is in feite ineens de documentatie.
+
 +++
 
 ## voorbeeld: Ansible
@@ -245,6 +301,8 @@ $ cat playbook.yml
       name: git
       state: latest
 ```
+note:
+een voorbeeld van een zeer eenvoud yml bestand, dat de laatste versie van git installeerd, op alle hosts die in de inventory voorkomen
 
 +++
 
