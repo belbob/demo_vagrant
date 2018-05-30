@@ -311,8 +311,10 @@ een voorbeeld van een zeer eenvoud yml bestand, dat de laatste versie van git in
 
 ```
 $ vagrant up
-# networking, mount, and other magic
-# Ansible provisioner runs, git and deps are installed
+# start VM
+# start netwerk en bestandsbeheer
+# draait inine-script, install git
+# Ansible provisioner draait, git en deps worden geinstalleerd
 ```
 +++
 
